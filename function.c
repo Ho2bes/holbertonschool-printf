@@ -19,6 +19,7 @@ int _putchar(char c)
 /**
  * print_char - Prints a character
  * @args: The va_list containing the argument
+ * Return: the number of characters printed
  */
 
 int print_char(va_list args)
@@ -30,6 +31,7 @@ int print_char(va_list args)
 /**
  * print_string - Prints a string
  * @args: The va_list containing the argument
+ * Return: the number of characters printed
  */
 
 int print_string(va_list args)
@@ -38,7 +40,7 @@ int print_string(va_list args)
 	char *str;
 
 	str = va_arg(args, char *);
-	
+
 	while (str[i] != '\0')
 	{
 		_putchar(str[i]);
@@ -50,6 +52,7 @@ int print_string(va_list args)
 /**
  * print_percent - Prints a percentage
  * @args: The va_list containing the argument
+ * Return: the number of characters printed
  */
 
 int print_percent(va_list args)
