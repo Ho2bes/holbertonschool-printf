@@ -15,7 +15,9 @@ int _printf(const char *format, ...)
 	format_t specifier[] = {
 		{"c", print_char},
 		{"s", print_string},
-		{"%", print_percent},
+		{"%", print_percent}
+		{"d", print_decimal}
+		{"i", print_interger}
 		{NULL, NULL}
 	};
 	va_start(args, format);
