@@ -47,3 +47,24 @@ int print_percent(va_list args)
 	_putchar('%');
 		return (1);
 }
+
+/**
+  * print_integer - print an interger
+  *@args: The va_list containing the argument
+  *Return: the number of charaters printed
+  */
+
+int print_integer(va_list args)
+{
+	int num = va_arg(args, int);
+	if (num < 0)
+	{
+	_putchar('-');
+	num = -num;
+	}
+	if (num / 10 != 0)
+	{
+	print_interger((num / 10), args);
+	}
+	_putchar(num % 10 + '0');
+}
