@@ -44,6 +44,7 @@ int print_string(va_list args)
 
 int print_percent(va_list args)
 {
+	(void)args;
 	_putchar('%');
 		return (1);
 }
@@ -64,7 +65,7 @@ int print_integer(va_list args)
 	}
 	if (num / 10 != 0)
 	{
-	print_interger((num / 10), args);
+	print_integer((num / 10), args);
 	}
 	_putchar(num % 10 + '0');
 }
