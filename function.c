@@ -47,17 +47,3 @@ int print_percent(va_list args)
 	_putchar('%');
 		return (1);
 }
-
-/**
- * print_integer - Prints a integer
- * @args: The va_list containing the argument
- * Return: the number of characters printed
- */
-
-int print_integer(va_list args)
-{
-	int i;
-
-	if (i < 0)
-		_putchar('-');
-	
