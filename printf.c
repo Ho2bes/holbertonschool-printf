@@ -8,14 +8,15 @@
   */
 int _printf(const char *format, ...)
 {
-	char *s;
 	int count = 0;
 	int character = 0;
 	va_list args;
 	format_t specifier[] = {
 		{"c", print_char},
 		{"s", print_string},
-		{"%", print_percent}
+		{"%", print_percent},
+		{"d", print_integer},
+		{"i", print_integer},
 		{NULL, NULL}
 	};
 	va_start(args, format);
@@ -24,7 +25,7 @@ int _printf(const char *format, ...)
 		if (format[character] == '%')
 		{
 			count = 0;
-			while (count < 3)
+			while (count < 5)
 			{
 				if (format[character + 1] == *specifier[count].tools)
 				{
