@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <unistd.h>
-#include "_putchar.c"
 
 /**
  * print_char - Prints a character
