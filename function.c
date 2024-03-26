@@ -56,9 +56,10 @@ int print_percent(va_list args)
   *Return: the number of charaters printed
   */
 
-void print_integer(va_list args)
+int print_integer(va_list args)
 {
 	int num = va_arg(args, int);
+	int reversed_num;
 
 	if (num < 0)
 	{
@@ -68,18 +69,19 @@ void print_integer(va_list args)
 	if (num == 0)
 	{
 		_putchar('0');
-		return;
+		return (0);
 	}
-	int reversedNum = 0;
+	reversed_num = 0;
 
 	while (num > 0)
 	{
 		reversed_num = reversed_num * 10 + num % 10;
 		num /= 10;
 	}
-	while (reversedNum > 0)
+	while (reversed_num > 0)
 	{
 		_putchar(reversed_num % 10 + '0');
 		reversed_num /= 10;
 	}
+	return (reversed_num);
 }
