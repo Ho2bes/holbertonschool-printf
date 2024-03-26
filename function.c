@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <unistd.h>
+#include "_putchar.c"
 
 /**
  * print_char - Prints a character
@@ -55,17 +56,30 @@ int print_percent(va_list args)
   *Return: the number of charaters printed
   */
 
-int print_integer(va_list args)
+void print_integer(va_list args)
 {
 	int num = va_arg(args, int);
+
 	if (num < 0)
 	{
-	_putchar('-');
-	num = -num;
+		_putchar('-');
+		num = -num;
 	}
-	if (num / 10 != 0)
+	if (num == 0)
 	{
-	print_integer((num / 10), args);
+		_putchar('0');
+		return;
 	}
-	_putchar(num % 10 + '0');
+	int reversedNum = 0;
+
+	while (num > 0)
+	{
+		reversed_num = reversed_num * 10 + num % 10;
+		num /= 10;
+	}
+	while (reversedNum > 0)
+	{
+		_putchar(reversed_num % 10 + '0');
+		reversed_num /= 10;
+	}
 }
