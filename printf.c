@@ -25,17 +25,21 @@ int _printf(const char *format, ...)
 	{
 		if (format[character] == '%')
 		{
-			count = 0;
-			while (count < 5)
+			character++;
+			for (count = 0; specifier[count].tools != NULL; count++)
 			{
-				if (format[character + 1] == *specifier[count].tools)
+				if (format[character] == *specifier[count].tools)
 				{
 					count_characters += specifier[count].print(args);
 					break;
 				}
-				count++;
 			}
-			character++;
+			if (specifier[count].tools == NULL)
+            {
+                _putchar('%');
+                _putchar(format[character]);
+                count_characters += 2;
+            }
 		}
 		else
 		{
