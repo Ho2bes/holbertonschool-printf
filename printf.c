@@ -40,7 +40,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			_putchar(format[character]);
-			count_characters++
+			count_characters++;
 		}
 		character++;
 	}
