@@ -55,11 +55,13 @@ int print_integer(va_list args)
 {
 	int num = va_arg(args, int);
 	int reversed_num;
+	int count = 0;
 
 	if (num < 0)
 	{
 		_putchar('-');
 		num = -num;
+		count++;
 	}
 	if (num == 0)
 	{
@@ -74,8 +76,11 @@ int print_integer(va_list args)
 	}
 	while (reversed_num > 0)
 	{
-		_putchar(reversed_num % 10 + '0');
+		int digit = reversed_num % 10;
+
+		_putchar(digit + '0');
 		reversed_num /= 10;
+		count++;
 	}
-	return (1);
+	return (count);
 }
