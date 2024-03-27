@@ -1,13 +1,17 @@
 .Dd 26/03/24               \" DATE
 .Dt _printf 3      \" Program name and manual section number
-.Os T.Guerin and N.Brault Domingo
+.Os Guerin/BraultDomingo
 .Sh NAME                 \" Section Header - required - don't modify
 .Nm _printf
+\- custom printf function
 .Sh SYNOPSIS             \" Section Header - required - don't modify
-.Nm #include "main.h"
+.Nm #include <stdarg.h>
+.Pp
+.Nm #include <unistd.h>
+.Pp
+.Nm #include <stdio.h>
 .Pp
 int
-.Pp
 .Nm _printf
 .Ar (const char *format, ...);
 .Pp
@@ -22,10 +26,14 @@ The
 .Ar format
 is a character string. The format string is composed of zero or more directives.
 .Pp                      \" Inserts a space
-Each conversion specification is introduced by the % character.The arguments
-must correspond properly (after type promotion)with the conversion specifier.
+Each conversion specification is introduced by the
+.Ar %
+character. The arguments
+must correspond properly (after type promotion) with the conversion specifier.
 .Pp
-After the %, the following appear in sequence:
+After the
+.Ar %
+, the following appear in sequence:
 .Bl -tag -width -indent  \" Begins a tagged list
 .It c -
 Specifier for a value of a character variable,
@@ -52,11 +60,11 @@ used to end output to strings).
 .El                      \" Ends the list
 .Pp
 .Bl -tag -width -indent
-.It printf("Character: %c\n", character);
-.It printf("String: %s\n", string);
+.It printf("Character: %c", character);
+.It printf("String: %s", string);
 .It printf("Percentage: %%\n");
-.It printf("Integer: %d\n", integer);
-.It printf("Another Integer: %i\n", integer);
+.It printf("Integer: %d", integer);
+.It printf("Another Integer: %i", integer);
 .El                      \" Ends the list
 .Pp
 You can get : "
@@ -65,7 +73,7 @@ You can get : "
 .It String: Hello, world!
 .It Percentage: %
 .It Integer: 12345
-.It Another Integer: 12345 "
+.It Another Integer: 12345".
 .El
 .Sh SEE ALSO
 .Xr printf 3
