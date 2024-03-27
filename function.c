@@ -64,10 +64,9 @@ int print_integer(va_list args)
 	if (num == 0)
 	{
 		_putchar('0');
-		return (0);
+		return (1);
 	}
 	reversed_num = 0;
-
 	while (num > 0)
 	{
 		reversed_num = reversed_num * 10 + num % 10;
@@ -78,5 +77,5 @@ int print_integer(va_list args)
 		_putchar(reversed_num % 10 + '0');
 		reversed_num /= 10;
 	}
-	return (reversed_num);
+	return (1);
 }
