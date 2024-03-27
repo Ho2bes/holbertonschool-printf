@@ -85,5 +85,8 @@ int print_integer(va_list args)
 		}
 		reversed_num /= 10;
 	}
-	return (count);
+	if (count == 0)
+		return (-1);
+	else
+		return (count);
 }
