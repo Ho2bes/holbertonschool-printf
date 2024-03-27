@@ -78,9 +78,12 @@ int print_integer(va_list args)
 	{
 		int digit = reversed_num % 10;
 
-		_putchar(digit + '0');
+		if (digit >= 0 && digit <= 9)
+		{
+			_putchar(digit + '0');
+			count++;
+		}
 		reversed_num /= 10;
-		count++;
 	}
 	return (count);
 }
