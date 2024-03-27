@@ -8,9 +8,7 @@
   */
 int _printf(const char *format, ...)
 {
-	int count = 0;
-	int character = 0;
-	int count_characters = 0;
+	int count, character, count_characters = 0;
 	va_list args;
 	format_t specifier[] = {
 		{"c", print_char},
@@ -35,11 +33,11 @@ int _printf(const char *format, ...)
 				}
 			}
 			if (specifier[count].tools == NULL)
-            {
-                _putchar('%');
-                _putchar(format[character]);
-                count_characters += 2;
-            }
+			{
+				_putchar('%');
+				_putchar(format[character]);
+				count_characters += 2;
+			}
 		}
 		else
 		{
