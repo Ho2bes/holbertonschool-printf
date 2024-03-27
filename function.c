@@ -1,8 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdarg.h>
-#include <unistd.h>
-
 /**
  * print_char - Prints a character
  * @args: The va_list containing the argument

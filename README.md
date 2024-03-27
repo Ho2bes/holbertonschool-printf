@@ -1,6 +1,6 @@
 # C - printf function project
 
-A function that produces output according to differents formats and converting specifiers. 
+A function that produces output according to differents formats and converting specifiers.
 
 **In other words: do printf without printf.**
 
@@ -21,7 +21,7 @@ VIM was used to write the code.
 ## Project overview
 ### Compilation:
 
-All files will be compiled with : 
+All files will be compiled with :
 
 > _gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c_
 
@@ -32,12 +32,12 @@ All files are written in C and follows the Betty coding style for Holberton Scho
 ### Authorized functions and macros
 
 - write
-- malloc 
-- free 
-- va_start 
-- va_end 
-- va_copy 
-- va_arg 
+- malloc
+- free
+- va_start
+- va_end
+- va_copy
+- va_arg
 - _putchar
 
 ### Files description
@@ -57,7 +57,7 @@ Writes the character c to standard output
 - **int print_char(va_list args);***
 This function prints each character of char
 - **int print_string(va_list args);***
-This function prints characters of a string 
+This function prints characters of a string
 - **int print_percent(va_list args);***
 This function prints a per cent sign '%'.
 - **int print_integer(va_list args);***
@@ -92,7 +92,7 @@ _printf("Let's try to printf a simple sentence.\n");
 Output : Let's try to printf a simple sentence
 ````
 ## 🚀 About Us
-**T. GUERIN and N. BRAULT DOMINGO** are two students at Holberton School, the best school in the world. 
+**T. GUERIN and N. BRAULT DOMINGO** are two students at Holberton School, the best school in the world.
 
 
 ## Credits
