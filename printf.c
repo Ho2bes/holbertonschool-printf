@@ -6,7 +6,7 @@
   */
 int _printf(const char *format, ...)
 {
-	int count, character, count_characters = 0;
+	int count, character = 0, count_characters = 0;
 	va_list args;
 	format_t specifier[] = {
 		{"c", print_char},
