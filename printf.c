@@ -10,6 +10,7 @@ int _printf(const char *format, ...)
 {
 	int count = 0;
 	int character = 0;
+	int count_characters = 0;
 	va_list args;
 	format_t specifier[] = {
 		{"c", print_char},
@@ -29,7 +30,7 @@ int _printf(const char *format, ...)
 			{
 				if (format[character + 1] == *specifier[count].tools)
 				{
-					specifier[count].print(args);
+					count_characters += specifier[count].print(args);
 					break;
 				}
 				count++;
@@ -39,9 +40,10 @@ int _printf(const char *format, ...)
 		else
 		{
 			_putchar(format[character]);
+			count_characters++
 		}
 		character++;
 	}
 	va_end(args);
-	return (character);
+	return (count_characters);
 }
