@@ -12,9 +12,9 @@ int
 .Ar (const char *format, ...);
 .Pp
 .Sh DESCRIPTION          \" Section Header - required - don't modify
-The 
+The
 .Nm _printf()
-function produces output according to a 
+function produces output according to a
 .Ar format
 as described below.
 .Pp
@@ -22,8 +22,8 @@ The
 .Ar format
 is a character string. The format string is composed of zero or more directives.
 .Pp                      \" Inserts a space
-Each conversion specification is introduced by the % character.The arguments 
-must correspond properly (after type promotion)with the conversion specifier. 
+Each conversion specification is introduced by the % character.The arguments
+must correspond properly (after type promotion)with the conversion specifier.
 .Pp
 After the %, the following appear in sequence:
 .Bl -tag -width -indent  \" Begins a tagged list
@@ -40,7 +40,7 @@ Specifier for a '%'.
 .El                      \" Ends the list
 .Pp
 .Sh RETURN VALUE
-This function return the number of characters printed (excluding the null byte 
+This function return the number of characters printed (excluding the null byte
 used to end output to strings).
 .Pp
 .Sh EXAMPLE
@@ -68,7 +68,7 @@ You can get : "
 .It Another Integer: 12345 "
 .El
 .Sh SEE ALSO
-.Xr printf 3 
+.Xr printf 3
 .Pp
 .Sh BUGS
 No known bugs.
