@@ -51,7 +51,7 @@ All files are written in C and follow the Betty coding style for Holberton Schoo
 
 ### Functions prototypes
 ````
-- **int _printf(const char *format, ...);***
+int _printf(const char *format, ...);
 ````
 
 This function produces output of a format string that specifies how the following arguments are converted for output.
