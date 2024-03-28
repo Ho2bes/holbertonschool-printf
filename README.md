@@ -21,13 +21,13 @@ VIM was used to write the code.
 ## Project overview
 ### Compilation:
 
-All files will be compiled with :
+All files will be compiled with:
 
 > _gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c_
 
 
 Betty coding style:
-All files are written in C and follows the Betty coding style for Holberton School.
+All files are written in C and follow the Betty coding style for Holberton School.
 
 ### Authorized functions and macros
 
@@ -41,16 +41,19 @@ All files are written in C and follows the Betty coding style for Holberton Scho
 - _putchar
 
 ### Files description
-**main.h** -> this file contains the structure and the prototypes
+**main.h** -> This file contains the structure and the prototypes.
 
-**function.c** -> this file contains the function to print string, character, integer and decimal
+**function.c** -> This file contains the functions to print strings, characters, integers and decimals.
 
-**printf.c** -> this file contains the main code to print differents format of character
+**printf.c** -> This file contains the main code to print differents formats of character.
 
-**man_3_printf** -> this file contains the manual of printf function
+**man_3_printf** -> This file contains the manual of printf function.
 
 ### Functions prototypes
+````
 - **int _printf(const char *format, ...);***
+````
+
 This function produces output of a format string that specifies how the following arguments are converted for output.
 - **int _putchar(char c);***
 Writes the character c to standard output
@@ -67,7 +70,7 @@ This functions prints an integer or a decimal number
 
 This function produces output of a format string that specifies how the following arguments are converted for output.
 
-The format string is composed of :
+The format string is composed of:
 
 **Ordinary Characters:** These are regular letters, numbers, or symbols that are just copied exactly as they are to the output without any changes, except for the percentage symbol %.
 
@@ -85,7 +88,7 @@ The format string is composed of :
 
 **Return Value :** When the program is finished printing items, it tells you how many characters it printed.
 
-### Exemple
+### Example
 ````
 _printf("Let's try to printf a simple sentence.\n");
 
