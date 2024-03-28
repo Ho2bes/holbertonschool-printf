@@ -53,7 +53,7 @@ int print_percent(va_list args)
 
 int print_integer(va_list args)
 {
-	int num = va_arg(list, int);
+	int num = va_arg(args, int);
 	int count = 0;
 	int divisor = 1;
 	int digit;
