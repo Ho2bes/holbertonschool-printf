@@ -54,14 +54,19 @@ int print_percent(va_list args)
 int print_integer(va_list args)
 {
 	int num = va_arg(args, int);
-	int reversed_num;
+	int reversed_num, digit;
 	int count = 0;
+
+	if (num < INT_MIN || num > INT_MAX || args == NULL)
+	{
+		return (-1);
+	}
 
 	if (num < 0)
 	{
 		_putchar('-');
-		num = -num;
 		count++;
+		num = -num;
 	}
 	if (num == 0)
 	{
@@ -76,17 +81,10 @@ int print_integer(va_list args)
 	}
 	while (reversed_num > 0)
 	{
-		int digit = reversed_num % 10;
-
-		if (digit >= 0 && digit <= 9)
-		{
-			_putchar(digit + '0');
-			count++;
-		}
+		digit = reversed_num % 10;
+		_putchar(digit + '0');
+		count++;
 		reversed_num /= 10;
 	}
-	if (count == 0)
-		return (-1);
-	else
 		return (count);
 }
