@@ -92,7 +92,7 @@ The format string is composed of:
 ````
 _printf("Let's try to printf a simple sentence.\n");
 
-Output : Let's try to printf a simple sentence
+Output : Let's try to printf a simple sentence.
 ````
 ![**Flowchart of our code**](https://github.com/Ho2bes/boom/blob/main/Flowchart%20printf%202.jpg)
 
