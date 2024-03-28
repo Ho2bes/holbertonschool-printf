@@ -42,7 +42,7 @@ int print_percent(va_list args)
 {
 	(void)args;
 	_putchar('%');
-		return (1);
+	return (1);
 }
 
 /**
@@ -53,14 +53,10 @@ int print_percent(va_list args)
 
 int print_integer(va_list args)
 {
-	int num = va_arg(args, int);
-	int reversed_num, digit;
+	int num = va_arg(list, int);
 	int count = 0;
-
-	if (num < INT_MIN || num > INT_MAX || args == NULL)
-	{
-		return (-1);
-	}
+	int divisor = 1;
+	int digit;
 
 	if (num < 0)
 	{
@@ -68,23 +64,25 @@ int print_integer(va_list args)
 		count++;
 		num = -num;
 	}
+
 	if (num == 0)
 	{
 		_putchar('0');
 		return (1);
 	}
-	reversed_num = 0;
-	while (num > 0)
+
+	while (num / divisor >= 10)
 	{
-		reversed_num = reversed_num * 10 + num % 10;
-		num /= 10;
+		divisor *= 10;
 	}
-	while (reversed_num > 0)
+
+	while (divisor != 0)
 	{
-		digit = reversed_num % 10;
+		digit = num / divisor;
 		_putchar(digit + '0');
 		count++;
-		reversed_num /= 10;
+		num %= divisor;
+		divisor /= 10;
 	}
-		return (count);
+	return (count);
 }
