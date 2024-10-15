@@ -97,7 +97,7 @@ Output : Let's try to printf a simple sentence.
 ![**Flowchart of our code**](https://github.com/Ho2bes/boom/blob/main/Flowchart%20printf%202.jpg)
 
 ## 🚀 About Us
-**T. GUERIN and N. BRAULT DOMINGO** are two students at Holberton School, the best school in the world.
+**T. GUERIN and N. B. DOMINGO** are two students at Holberton School, the best school in the world.
 
 
 ## Credits
